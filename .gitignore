@@ -1,3 +1,3 @@
-.vscode
-.gitignore
-
+.vscode/
+*.swp
+.*  # Ignore all hidden files

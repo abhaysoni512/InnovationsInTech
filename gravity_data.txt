@@ -1,0 +1,3 @@
+Gravity (m/s²): 9.8
+Gravity (m/s²): 9.8
+Gravity (m/s²): 9.8
