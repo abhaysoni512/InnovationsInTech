@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>🧠 Network Packet Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h2>📡 Real-Time Network Stats</h2>
+
+  <div style="display: flex; gap: 30px;">
+    <div>
+      <h3>Protocol Distribution</h3>
+      <canvas id="protocolPie"></canvas>
+    </div>
+    <div>
+      <h3>Top Source IPs</h3>
+      <canvas id="srcIpPie"></canvas>
+    </div>
+    <div>
+      <h3>Top Destination Ports</h3>
+      <canvas id="dstPortPie"></canvas>
+    </div>
+  </div>
+
+  <script>
+    async function fetchStats() {
+      const res = await fetch("/api/packet_stats");
+      const data = await res.json();
+      updateCharts(data);
+    }
+
+    let protocolPie, srcIpPie, dstPortPie;
+
+    function updatePie(chart, labels, values, colors) {
+      if (!chart) return null;
+
+      chart.data.labels = labels;
+      chart.data.datasets[0].data = values;
+      chart.update();
+    }
+
+    function updateCharts(data) {
+      const protocolLabels = Object.keys(data.protocols);
+      const protocolValues = Object.values(data.protocols);
+
+      const srcLabels = Object.keys(data.top_src_ips);
+      const srcValues = Object.values(data.top_src_ips);
+
+      const dstLabels = Object.keys(data.top_dst_ports);
+      const dstValues = Object.values(data.top_dst_ports);
+
+      // Create protocol pie chart
+      if (!protocolPie) {
+        protocolPie = new Chart(document.getElementById("protocolPie"), {
+          type: "pie",
+          data: {
+            labels: protocolLabels,
+            datasets: [{
+              data: protocolValues,
+              backgroundColor: ["skyblue", "orange", "gray", "lightgreen", "pink"]
+            }]
+          }
+        });
+      } else {
+        updatePie(protocolPie, protocolLabels, protocolValues);
+      }
+
+      // Create source IP pie chart
+      if (!srcIpPie) {
+        srcIpPie = new Chart(document.getElementById("srcIpPie"), {
+          type: "pie",
+          data: {
+            labels: srcLabels,
+            datasets: [{
+              data: srcValues,
+              backgroundColor: ["teal", "tomato", "purple", "gold", "olive"]
+            }]
+          }
+        });
+      } else {
+        updatePie(srcIpPie, srcLabels, srcValues);
+      }
+
+      // Create destination port pie chart
+      if (!dstPortPie) {
+        dstPortPie = new Chart(document.getElementById("dstPortPie"), {
+          type: "pie",
+          data: {
+            labels: dstLabels,
+            datasets: [{
+              data: dstValues,
+              backgroundColor: ["cyan", "magenta", "lightcoral", "yellow", "plum"]
+            }]
+          }
+        });
+      } else {
+        updatePie(dstPortPie, dstLabels, dstValues);
+      }
+    }
+
+    setInterval(fetchStats, 3000); // update every 3 seconds
+    fetchStats();
+  </script>
+</body>
+</html>
