@@ -30,6 +30,23 @@
 | 27        |                                | 17_checklistisSortedOrNot.cpp                 |
 | 28        |                                | 18_positiveNegArrayDifferentSide.cpp          |
 | 29        |                                | 19_MergingSortedArray.cpp                     |
+| 30        |                                | 20_FindingMissingElement.cpp                  |
+| 31        |                                | 22_sumOfTwoElements.cpp                       |
+| 32        |                                | 23_sumOfTwoNumberUsingHashing.cpp             |
+| 33        |                                | 24_sum_of_two_numbers_for_sorted_array.cpp    |
+| 34        |                                | 25_minAndMax.cpp                              |
 |-----------|--------------------------------|----------------------------------------------|
-| 30        | Sorting                        | 1_SelectionSort.cpp                           |
-| 31        |                                | 2_bubbleSort.cpp                              |
+| 35        | 2_String                       | 1_changingCaseOfString.cpp                    |
+| 36        |                                | 2_countingVowels.cpp                          |
+| 37        |                                | 3_validString.cpp                             |
+| 38        |                                | 4_CompareTwoString.cpp                        |
+| 39        |                                | 5_findingDuplicates.cpp                       |
+| 40        |                                | 6_StringsAnagram.cpp                          |
+|-----------|--------------------------------|----------------------------------------------|
+| 41        | 3_linkedList                   | 1_DisplayingElement.cpp                       |
+| 42        |                                | 1_OperationOnLinkedlistNoMemoryHandleCodeElement.cpp |
+| 43        |                                | 2_LinkedList.cpp                              |
+| 44        |                                | 3_circularLinkedList.cpp                      |
+|-----------|--------------------------------|----------------------------------------------|
+| 45        | Sorting                        | 1_SelectionSort.cpp                           |
+| 46        |                                | 2_bubbleSort.cpp                              |
