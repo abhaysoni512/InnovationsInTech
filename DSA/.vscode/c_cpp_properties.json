@@ -1,0 +1,30 @@
+// write code  to compile current file taking inputfrom inputf.in and output to outputf.in
+// operating system: macos
+
+// compiler: g++
+// file: main.cpp
+// input file: inputf.in
+// output file: outputf.in
+// command to compile: g++ main.cpp -o main
+// command to run: ./main < inputf.in > outputf.in
+// command to run: g++ main.cpp -o main && ./main < inputf.in > outputf.in
+// command to run: g++ main.cpp -o main && ./main < inputf.in > outputf.in
+// command to run: g++ main.cpp -o main && ./main < inputf.in > outputf.in
+
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "macFrameworkPath": [],
+            "compilerPath": "/usr/bin/clang++",
+            "cStandard": "c23",
+            "cppStandard": "c++23",
+            "intelliSenseMode": "macos-clang-arm64"
+        }
+    ],
+    "version": 4
+}

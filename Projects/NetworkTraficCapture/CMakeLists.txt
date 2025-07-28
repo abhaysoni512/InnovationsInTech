@@ -12,5 +12,5 @@ link_directories(/opt/homebrew/opt/libpcap/lib)
 
 find_package(pybind11 REQUIRED)
 
-add_library(packet_capture MODULE bindings/bindings.cpp cpp/packet_capture.cpp)
+add_library(packet_capture MODULE bindings/pybind_module.cpp src/packet_capture.cpp)
 target_link_libraries(packet_capture PRIVATE pybind11::module pcap)

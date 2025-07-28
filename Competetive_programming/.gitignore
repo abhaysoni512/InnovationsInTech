@@ -1,0 +1,14 @@
+# Development files
+update_readme.py
+input.txt
+output.txt
+
+# VSCode settings
+.vscode/
+
+# Executables
+*.exe
+*.out
+
+# OS specific
+.DS_Store

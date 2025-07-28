@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/packet_capture.dir/bindings/bindings.cpp.o"
-  "CMakeFiles/packet_capture.dir/bindings/bindings.cpp.o.d"
-  "CMakeFiles/packet_capture.dir/cpp/packet_capture.cpp.o"
-  "CMakeFiles/packet_capture.dir/cpp/packet_capture.cpp.o.d"
+  "CMakeFiles/packet_capture.dir/bindings/pybind_module.cpp.o"
+  "CMakeFiles/packet_capture.dir/bindings/pybind_module.cpp.o.d"
+  "CMakeFiles/packet_capture.dir/src/packet_capture.cpp.o"
+  "CMakeFiles/packet_capture.dir/src/packet_capture.cpp.o.d"
   "libpacket_capture.pdb"
   "libpacket_capture.so"
 )
