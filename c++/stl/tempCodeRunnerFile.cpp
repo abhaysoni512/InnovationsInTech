@@ -1,1 +1,0 @@
-displayPlayers("All Players", allPlayers);
