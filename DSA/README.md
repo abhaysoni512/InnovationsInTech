@@ -48,5 +48,7 @@
 | 43        |                                | 2_LinkedList.cpp                              |
 | 44        |                                | 3_circularLinkedList.cpp                      |
 |-----------|--------------------------------|----------------------------------------------|
-| 45        | Sorting                        | 1_SelectionSort.cpp                           |
-| 46        |                                | 2_bubbleSort.cpp                              |
+| 45        | 4_Stack                        | 1_CPPstyleStackUsingArray.cpp                 |
+| 46        |                                | 2_CreateStackUsingLinkedList.cpp              |
+|-----------|--------------------------------|----------------------------------------------|
+| 47        | stl                            | 14_nestedStl.cpp                              |
