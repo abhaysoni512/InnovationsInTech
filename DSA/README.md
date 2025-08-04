@@ -50,5 +50,7 @@
 |-----------|--------------------------------|----------------------------------------------|
 | 45        | 4_Stack                        | 1_CPPstyleStackUsingArray.cpp                 |
 | 46        |                                | 2_CreateStackUsingLinkedList.cpp              |
+| 47        |                                | 3_parenthesisCheck.cpp                        |
+| 48        |                                | 4_parenthesisCheck_Code.cpp                   |
 |-----------|--------------------------------|----------------------------------------------|
-| 47        | stl                            | 14_nestedStl.cpp                              |
+| 49        | stl                            | 14_nestedStl.cpp                              |
