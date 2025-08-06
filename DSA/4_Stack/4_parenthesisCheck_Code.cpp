@@ -18,7 +18,7 @@ public:
     }
 
     bool push(const char &x){
-        if(m_top == m_size-1) {
+        if(m_top == m_size-1){
             cout<<"Stack is full\n";
             return false;
         }

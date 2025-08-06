@@ -53,4 +53,7 @@
 | 47        |                                | 3_parenthesisCheck.cpp                        |
 | 48        |                                | 4_parenthesisCheck_Code.cpp                   |
 |-----------|--------------------------------|----------------------------------------------|
-| 49        | stl                            | 14_nestedStl.cpp                              |
+| 49        | 5_queue                        | 1_QueueImplementationUsingArray.cpp           |
+| 50        |                                | 2_circularCompany.cpp                         |
+|-----------|--------------------------------|----------------------------------------------|
+| 51        | stl                            | 14_nestedStl.cpp                              |
