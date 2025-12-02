@@ -1,0 +1,25 @@
+person:
+  fname: "Abhay"
+  lname: Soni
+  gender: M
+  age: 35
+  weight: 68.5
+  mood: yes
+  is_student: false
+  hobbies:
+    - sleeping
+    - eating
+    - kidding
+  address:
+    street: 123 Ab
+    city: sjf
+    zipcode: 12345
+
+hex: 0x12d6  #evalutes to 4822
+octal: 0024432
+positive-infinity: .inf #evulates to infinty(+ve)
+negative-infinity: -.inf #evulates to infinty(-ve)
+invalidNumber: .NAN #not a number
+null-val: null
+null-val1: ~
+null-val2: 

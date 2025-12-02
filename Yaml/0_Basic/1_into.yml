@@ -1,0 +1,13 @@
+person:
+  name: Abhay Soni
+  age: 35
+  gender: M
+  is_student: false
+  hobbies:
+    - sleeping
+    - eating
+    - kidding
+  address:
+    street: 123 Ab
+    city: sjf
+    zipcode: 12345
