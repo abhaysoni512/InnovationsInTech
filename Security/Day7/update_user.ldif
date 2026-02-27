@@ -1,0 +1,4 @@
+dn: uid=abhay,ou=People,dc=example,dc=com
+changetype: modify
+replace: mail
+mail: abhay.new@example.com

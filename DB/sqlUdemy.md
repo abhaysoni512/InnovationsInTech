@@ -278,6 +278,96 @@ CREATE TABLE photos(
 
 # Section 4 : Relating Records with Joins
 
+## What is a Join?
+A join is a SQL operation that allows you to combine rows from two or more tables based on a related column between them. It is used to retrieve data from multiple tables in a single query by specifying the relationship between the tables. 
+
+- We will use join most times that when we are asked to data that involves multple tables. For example, if we want to find all the photos created by a specific user, we will need to join the photos table with the users table to get the username of the user who created the photo.
+
+## Aggregation : Look at many rows and calculate a single value from them. For example, if we want to find the total number of photos created by a specific user, we can use the COUNT() function to count the number of rows in the photos table that have a specific user_id.
+
+- Words like "total", "average", "maximum", "minimum" are often indicators that we need to use aggregation functions in our SQL queries.
+
+![alt text](image-12.png)
+
+Q1. ![alt text](image-13.png)
+
+````sql
+SELECT contents, 	username
+FROM comments
+JOIN users ON users.id = comments.user_id;
+````
+Working of the query:
+![alt text](image-14.png)
+
+Q2 ![alt text](image-15.png)
+
+ ```sql
+ SELECT contents, url
+FROM comments
+JOIN photos ON photos.id = comments.photo_id;
+```
+
+Note: 
+1. Table order of joins does not matter for most of the cases. We can also write the above query as:
+```sql
+SELECT contents, url
+FROM photos
+JOIN comments ON photos.id = comments.photo_id;
+```
+2. We must give context if columns have same name in both tables. For example, if both users and photos table have a column named "id", we need to specify which table's id we are referring to in the join condition. We can do this by prefixing the column name with the table name or an alias for the table. For example:
+```sql
+select photos.id as P_id, users.id as U_id
+from photos
+join users on photos.user_id = users.id;
+```
+3. Tables can also be renamed with as keyword to make the query more readable. For example:
+```sql
+select p.id as P_id, u.id as U_id
+from photos as p
+join users as u on p.user_id = u.id;
+```
+## Show each photo url and username of the poster of the photo:
+```sql
+
+  select url, username
+  from photos as p
+  join users as u on u.id = p.user_id;
+```
+
+## Problem : when we insert a photo with user_id as NULL, it will not show up in the above query because there is no matching user_id in the users table.
+![alt text](image-16.png)
+
+### Inner join: It only returns rows where there is a match in both tables. So, if we use inner join in the above query, it will not return any rows for photos with user_id as NULL. When we don't specify the type of join, it defaults to inner join.
+![alt text](image-17.png)
+
+### Left Outer join: It returns all rows from the left table (photos) and the matching rows from the right table (users). If there is no match in the right table, it will return NULL for the columns from the right table. So, if we use left join in the above query, it will return all photos, including those with user_id as NULL, and for those photos, it will return NULL for the username.
+```sql
+select url, username
+from photos as p
+left join users as u on u.id = p.user_id;
+```
+
+![alt text](image-18.png)
+
+![alt text](image-19.png)
+
+### Right Outer join: It returns all rows from the right table (users) and the matching rows from the left table (photos). If there is no match in the left table, it will return NULL for the columns from the left table. So, if we use right join in the above query, it will return all users, including those who have not posted any photos, and for those users, it will return NULL for the url.
+```sql
+select url, username
+from photos as p
+right join users as u on u.id = p.user_id;
+```
+![alt text](image-20.png)
+
+### Full join : It returns all rows from both tables, with NULLs in places where the join condition is not satisfied. So, if we use full join in the above query, it will return all photos and all users, including those with user_id as NULL and those who have not posted any photos, and for those rows, it will return NULL for the columns from the other table.
+```sql
+select url, username
+from photos as p
+full join users as u on u.id = p.user_id;
+```
+![alt text](image-21.png)
+ 
+
 # Section 5 : Aggregation of Records
 
 # Section 6 : Working with Large Datasets

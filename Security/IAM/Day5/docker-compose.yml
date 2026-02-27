@@ -1,0 +1,31 @@
+services:
+  openldap:
+    image: osixia/openldap:latest
+    container_name: openldap_1
+    hostname: openldap  # Add this line
+    environment:
+      LDAP_ORGANISATION: "Example Inc"
+      LDAP_DOMAIN: "example.com"
+      LDAP_ADMIN_PASSWORD: "admin"
+      LDAP_BASEDN: "dc=example,dc=com"
+      LDAP_TLS: "false"
+    volumes:
+      - ./ldap_data:/var/lib/ldap
+      - ./ldap_config:/etc/ldap/slapd.d
+    ports:
+      - "389:389"
+      - "636:636"
+    restart: unless-stopped
+
+  phpldapadmin:  # Optional GUI
+    image: osixia/phpldapadmin:latest
+    container_name: phpldapadmin
+    environment:
+      PHPLDAPADMIN_LDAP_HOSTS: openldap
+      PHPLDAPADMIN_HTTPS: "false"
+    ports:
+      - "8080:80"
+    depends_on:
+      - openldap
+    restart: unless-stopped
+  
