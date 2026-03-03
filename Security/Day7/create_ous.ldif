@@ -1,0 +1,11 @@
+dn: ou=People,dc=example,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: People
+description: Container for user entries
+
+dn: ou=Groups,dc=example,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: Groups
+description: Container for group entries

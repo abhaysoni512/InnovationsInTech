@@ -1,0 +1,23 @@
+dn: uid=abhay,ou=People,dc=example,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Abhay Kumar
+sn: Kumar
+givenName: Abhay
+uid: abhay
+mail: abhay@example.com
+userPassword: password123  # Plain text for testing; hash in prod
+
+dn: uid=jane,ou=People,dc=example,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Jane Doe
+sn: Doe
+givenName: Jane
+uid: jane
+mail: jane@example.com
+userPassword: secret456

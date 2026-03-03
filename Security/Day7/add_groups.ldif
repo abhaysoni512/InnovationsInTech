@@ -1,0 +1,14 @@
+dn: cn=admins,ou=Groups,dc=example,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: admins
+description: Admin group
+member: uid=abhay,ou=People,dc=example,dc=com
+
+dn: cn=users,ou=Groups,dc=example,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: users
+description: Regular users
+member: uid=jane,ou=People,dc=example,dc=com
+member: uid=abhay,ou=People,dc=example,dc=com  # Multi-member

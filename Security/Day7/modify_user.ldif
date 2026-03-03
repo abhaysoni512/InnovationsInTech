@@ -1,0 +1,6 @@
+dn: uid=abhay,ou=People,dc=example,dc=com
+changetype: modify
+replace: mail
+mail: abhay.new@example.com
+add: telephoneNumber
+telephoneNumber: +91-1234567890  # Add new attribute
